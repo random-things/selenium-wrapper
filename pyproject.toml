@@ -1,0 +1,33 @@
+[tool.isort]
+force_single_line = "true"
+multi_line_output = 3
+include_trailing_comma = "true"
+force_grid_wrap = 0
+use_parentheses = "true"
+line_length = 120
+profile = "black"
+
+[tool.poetry]
+name = "selenium-wrapper"
+version = "0.1.16"
+description = ""
+authors = ["Me <20753937+random-things@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "selenium_wrapper"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+selenium = "^4.8.2"
+jsons = "^1.6.3"
+pyyaml = {version = "!=6.0.0,!=5.4.0,!=5.4.1"}
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.1"
+black = "^23.1.0"
+isort = "^5.12.0"
+pre-commit = "^3.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
